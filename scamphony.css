@@ -1,0 +1,582 @@
+
+/* =========================================================
+   SCAMPHONY CASE STUDY
+   Independent stylesheet. Other pages are unaffected.
+   ========================================================= */
+
+
+/* =========================================================
+   01. COLOURS & VARIABLES
+   ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+:root {
+    --bg: #211f21;
+    --surface: #2b2829;
+    --cream: #e8dfc8;
+    --muted: #b8ab97;
+    --accent: #d7a06d;
+    --line: #423b39;
+
+    --content: 1600px;
+}
+
+
+/* =========================================================
+   02. BASIC PAGE STYLES
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--cream);
+    font: 16px/1.75 "DM Sans", sans-serif;
+}
+S
+a {
+    color: inherit;
+}
+
+a:hover,
+a:focus-visible {
+    color: var(--accent);
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+.wrap {
+    width: min(calc(100% - 64px), var(--content));
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+   03. SMALL TEXT / LABELS
+   ========================================================= */
+
+.eyebrow {
+    color: var(--accent);
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   04. NAVIGATION
+   ========================================================= */
+
+.site-nav {
+    min-height: 82px;
+    padding: 18px max(32px, calc((100vw - var(--content))/2));
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    border-bottom: 1px solid var(--line);
+}
+
+.site-nav a {
+    text-decoration: none;
+}
+
+.wordmark {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.wordmark .mark {
+    color: var(--accent);
+    font-size: 2rem;
+}
+
+.wordmark small {
+    display: block;
+    margin-top: 6px;
+
+    color: var(--muted);
+    font: 700 .65rem Consolas, monospace;
+    letter-spacing: .12em;
+}
+
+.site-nav nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(16px, 3vw, 38px);
+
+    font-size: .9rem;
+}
+
+
+/* =========================================================
+   05. HERO INTRODUCTION
+   ========================================================= */
+
+.hero-intro {
+    padding-top: 36px;
+}
+
+.back-link {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: .88rem;
+}
+
+.hero-intro .eyebrow {
+    margin-top: 28px;
+    margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   06. SCAMPHONY HERO ARTWORK
+   ========================================================= */
+
+.scamphony-hero {
+    position: relative;
+    isolation: isolate;
+
+    display: grid;
+    place-items: center;
+
+    min-height: clamp(260px, 31vw, 420px);
+    overflow: hidden;
+}
+
+.hero-paper {
+    position: absolute;
+    inset: 0;
+
+    background: url('media/scamphony/scamphony-paper.png')
+                center / cover no-repeat;
+
+    z-index: -1;
+}
+
+.hero-logo {
+    display: block;
+    width: min(70%, 770px);
+    height: auto;
+    margin: 35px auto;
+
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,.08));
+}
+
+
+/* =========================================================
+   07. HERO DESCRIPTION
+   ========================================================= */
+
+.hero-description {
+    padding-top: 26px;
+    padding-bottom: 72px;
+}
+
+.hero-description .eyebrow {
+    margin: 0 0 10px;
+}
+
+.hero-lede {
+    max-width: 780px;
+    margin: 0;
+
+    font-size: clamp(1.2rem, 2.2vw, 1.7rem);
+    line-height: 1.45;
+}
+
+.hero-sub {
+    max-width: 700px;
+    color: var(--muted);
+    margin-top: 12px;
+}
+
+
+/* =========================================================
+   08. CASE STUDY LAYOUT
+   ========================================================= */
+
+.study-layout {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: clamp(40px, 5vw, 100px);
+    align-items: start;
+}
+
+/* =========================================================
+   09. PAGE INDEX / SIDE NAVIGATION
+   ========================================================= */
+
+.page-index {
+    position: sticky;
+    top: 24px;
+
+    padding-left: 20px;
+    border-left: 1px solid var(--line);
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.page-index .eyebrow {
+    margin: 0 0 4px;
+}
+
+.page-index a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: .86rem;
+}
+
+.page-index a:hover {
+    color: var(--cream);
+}
+
+
+/* =========================================================
+   10. CASE STUDY CONTENT
+   ========================================================= */
+
+.study-content {
+    min-width: 0;
+}
+
+.study-section {
+    padding: 26px 0 54px;
+    margin-bottom: 16px;
+
+    border-bottom: 1px solid var(--line);
+    scroll-margin-top: 30px;
+}
+
+.study-section h2 {
+    margin: 8px 0 22px;
+
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+    line-height: 1.2;
+    letter-spacing: -.025em;
+}
+
+.study-section h3 {
+    margin: 48px 0 12px;
+
+    font-size: 1.25rem;
+    line-height: 1.35;
+}
+
+.study-section p {
+    width: 100%;
+    max-width: 85ch;
+    margin: 0 0 18px;
+    color: #d7cebf;
+}
+
+.study-section .eyebrow {
+    color: var(--accent);
+}
+
+.study-content {
+    width: 100%;
+    max-width: 1100px;
+    min-width: 0;
+}
+
+/* =========================================================
+   11. MY ROLE LIST
+   ========================================================= */
+
+.role-list {
+    columns: 2;
+    column-gap: 34px;
+
+    margin: 20px 0 24px;
+    padding-left: 22px;
+}
+
+.role-list li {
+    break-inside: avoid;
+    padding-bottom: 8px;
+}
+
+
+/* =========================================================
+   12. GENERAL IMAGE / MEDIA STYLES
+   ========================================================= */
+
+.media-block {
+    margin: 32px 0 40px;
+}
+
+.media-block img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    border: 1px solid var(--line);
+}
+
+.media-block figcaption,
+.expression-gallery figcaption {
+    margin-top: 10px;
+
+    color: var(--muted);
+    font-size: .82rem;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   13. PROMOTIONAL POSTER
+   ========================================================= */
+
+.poster-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0 0 54px;
+}
+
+.poster-block img {
+    width: min(100%, 480px);
+}
+
+.poster-block figcaption {
+    align-self: center;
+    text-align: center;
+}
+
+
+/* =========================================================
+   14. CHARACTER EXPRESSION GALLERY
+   ========================================================= */
+
+.expression-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 16px;
+
+    margin: 26px 0 34px;
+}
+
+.expression-gallery figure {
+    margin: 0;
+    min-width: 0;
+    padding: 14px;
+
+    background: var(--surface);
+    border: 1px solid var(--line);
+    text-align: center;
+}
+
+.expression-gallery img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+}
+
+.expression-gallery figcaption {
+    text-align: center;
+}
+
+
+/* =========================================================
+   15. WORLD MAP
+   ========================================================= */
+
+.map-block img {
+    max-height: 680px;
+    object-fit: contain;
+    background: #302820;
+}
+
+
+/* =========================================================
+   16. GRIMOIRE / BOOK ARTWORK
+   ========================================================= */
+
+.book-block img {
+    max-width: 620px;
+    margin-inline: auto;
+}
+
+.book-block figcaption {
+    text-align: center;
+}
+
+
+/* =========================================================
+   17. GAMEPLAY VIDEO
+   ========================================================= */
+
+.video-slot {
+    margin: 24px 0 38px;
+}
+
+.video-slot video {
+    display: block;
+    width: 100%;
+
+    background: #151415;
+    border: 1px solid var(--line);
+}
+
+.video-slot .media-hint {
+    margin-top: 8px;
+
+    color: var(--muted);
+    font-size: .78rem;
+}
+
+.video-slot code {
+    font-family: Consolas, monospace;
+}
+
+
+/* =========================================================
+   18. FOOTER
+   ========================================================= */
+
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    padding-top: 35px;
+    padding-bottom: 45px;
+}
+
+.site-footer a {
+    text-decoration: none;
+}
+
+.site-footer span {
+    display: block;
+
+    font-size: .68rem;
+    letter-spacing: .08em;
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   19. TABLET RESPONSIVENESS
+   Screens up to 850px wide
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .study-layout {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .page-index {
+        position: static;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+
+        padding-left: 0;
+        padding-bottom: 16px;
+
+        border-left: 0;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .page-index .eyebrow {
+        width: 100%;
+    }
+
+    .hero-description {
+        padding-bottom: 36px;
+    }
+
+}
+
+
+/* =========================================================
+   20. MOBILE RESPONSIVENESS
+   Screens up to 600px wide
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .wrap {
+        width: min(calc(100% - 36px), var(--content));
+    }
+
+    .site-nav {
+        padding: 15px 18px;
+
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .site-nav nav {
+        gap: 14px 24px;
+    }
+
+    .scamphony-hero {
+        min-height: 220px;
+    }
+
+    .hero-logo {
+        width: 86%;
+    }
+
+    .role-list {
+        columns: 1;
+    }
+
+    .expression-gallery {
+        gap: 10px;
+    }
+
+    .expression-gallery img {
+        height: 190px;
+    }
+
+    .site-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+
+/* =========================================================
+   21. ACCESSIBILITY
+   Respect reduced-motion preferences
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+}

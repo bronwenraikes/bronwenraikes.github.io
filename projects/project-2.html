@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SCAMPHONY, a narrative deduction game. Game design case study by Bronwen Raikes.">
+  <title>SCAMPHONY | Bronwen Raikes</title>
+  <link rel="stylesheet" href="../scamphony.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-nav">
+    <a class="wordmark" href="../index.html" aria-label="Bronwen Raikes, portfolio home">
+      <span class="mark" aria-hidden="true">✦</span>
+      <span>Bronwen Raikes <small>DESIGN PORTFOLIO</small></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#cv">CV</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero-intro wrap">
+      <a class="back-link" href="../index.html#projects">← Back to selected work</a>
+      <p class="eyebrow">CASE STUDY / 02 · PLAYABLE PROTOTYPE</p>
+    </div>
+
+    <section class="scamphony-hero" aria-label="SCAMPHONY title artwork">
+      <div class="hero-paper" aria-hidden="true"></div>
+      <img class="hero-logo" src="../media/scamphony/scamphony-title.png" alt="SCAMPHONY">
+    </section>
+
+    <div class="hero-description wrap">
+      <p class="eyebrow">GAME DESIGN · NARRATIVE · VISUAL DESIGN</p>
+      <p class="hero-lede">A narrative deduction game where you play as a fraudulent psychic.</p>
+      <p class="hero-sub">Read between the lines, exploit what clients reveal, and keep suspicion low before your reputation catches up with you.</p>
+    </div>
+
+    <div class="study-layout wrap">
+      <aside class="page-index" aria-label="On this page">
+        <p class="eyebrow">ON THIS PAGE</p>
+        <a href="#overview">Overview</a>
+        <a href="#role">My role</a>
+        <a href="#design">Design decisions</a>
+        <a href="#process">Process &amp; iteration</a>
+      </aside>
+
+      <article class="study-content">
+        <figure class="media-block poster-block">
+          <img src="../media/scamphony/Promo.png" alt="SCAMPHONY promotional artwork with a mysterious figure and crystal ball" loading="eager">
+          <figcaption>Promotional artwork and visual identity for SCAMPHONY.</figcaption>
+        </figure>
+
+        <section class="study-section" id="overview">
+          <p class="eyebrow">01 / OVERVIEW</p>
+          <h2>Concept</h2>
+          <p>SCAMPHONY is a narrative deduction game in which the player takes the role of a fraudulent psychic. With no supernatural ability, they must read clients, identify their defining traits and choose the right tools to make each reading convincing.</p>
+          <p>Successful cons earn progress, while mistakes increase suspicion. As suspicion builds, the player must decide when to move on and where to go next, balancing short-term success against the need to keep an escape route available.</p>
+          <figure class="media-block">
+            <img src="../media/scamphony/WorkingScene.png" alt="SCAMPHONY in-game scene showing a client across a fortune-telling counter" loading="lazy">
+            <figcaption>Client-facing scene, establishing the setting and presentation of a reading.</figcaption>
+          </figure>
+        </section>
+
+        <section class="study-section" id="role">
+          <p class="eyebrow">02 / MY ROLE</p>
+          <h2>Game Design &amp; Creative Direction</h2>
+          <p>SCAMPHONY is a collaborative two-person project. My role includes:</p>
+          <ul class="role-list">
+            <li>Core gameplay concept and loop</li>
+            <li>Suspicion and progression systems</li>
+            <li>Dialogue and dialogue trees</li>
+            <li>Character design and expressions</li>
+            <li>Narrative design and worldbuilding</li>
+            <li>Visual direction and 2D artwork</li>
+          </ul>
+          <p>Programming and technical implementation are primarily handled by the other developer, with design and feasibility discussed collaboratively.</p>
+        </section>
+
+        <section class="study-section" id="design">
+          <p class="eyebrow">03 / DESIGN DECISIONS</p>
+          <h2>Systems that make the player think.</h2>
+
+          <h3>Reading the client</h3>
+          <p>Each client has two defining traits hidden within their dialogue. The player must interpret these clues and select a prop associated with the combination they believe is correct.</p>
+          <div class="expression-gallery" aria-label="Client character expressions">
+            <figure><img src="../media/scamphony/Neutral.png" alt="Client character with a neutral expression" loading="lazy"><figcaption>Neutral</figcaption></figure>
+            <figure><img src="../media/scamphony/Sad.png" alt="Client character with a sad expression" loading="lazy"><figcaption>Sad</figcaption></figure>
+          </div>
+          <figure class="media-block">
+            <img src="../media/scamphony/Ouija_Board.png" alt="Ouija board prop interface with selectable letters and planchette" loading="lazy">
+            <figcaption>Interactive prop artwork used to support the reading experience.</figcaption>
+          </figure>
+
+          <h3>Local and global suspicion</h3>
+          <p>I designed two connected suspicion systems. Local suspicion represents how convinced the current client is, while global suspicion represents the player's growing reputation as a fraud.</p>
+          <p>Small mistakes may be recoverable during a reading, but repeated failures accumulate globally and can eventually force the player to leave town.</p>
+
+          <h3>Planning an escape</h3>
+          <p>Relocation takes place across a connected map, making each move a strategic decision. The player must maintain an available escape route in case suspicion forces them to leave again.</p>
+          <p>Entering a location without a viable route out means relocation is no longer an option. The player must perform well enough to remain there.</p>
+          <figure class="media-block map-block">
+            <img src="../media/scamphony/MAP.png" alt="SCAMPHONY parchment world map with connected settlements and routes" loading="lazy">
+            <figcaption>Connected locations make relocation a strategic decision.</figcaption>
+          </figure>
+
+          <h3>Profit versus morality</h3>
+          <p>Clients range from relatively harmless requests to situations where exploiting them becomes significantly more questionable. These clients can offer greater financial rewards, creating a tension between earning money and choosing who the player is willing to manipulate.</p>
+          <p>I am exploring ways for these decisions to have longer-term consequences rather than functioning as isolated dialogue choices.</p>
+
+          <h3>Subverting established expectations</h3>
+          <p>Some later-game design details have intentionally been omitted to preserve the intended player experience.</p>
+          <p>As the game progresses, established systems and interface conventions are used in unexpected ways, allowing the narrative to influence how familiar interactions feel and behave.</p>
+
+          <h3>A story within a larger world</h3>
+          <p>SCAMPHONY follows a character connected to a larger game universe, although his identity is never explicitly revealed. Environmental details, dialogue and narrative clues instead allow attentive players to make the connection themselves.</p>
+          <p>This allows the project to tell a focused standalone story while quietly expanding a much larger interconnected world.</p>
+        </section>
+
+        <section class="study-section" id="process">
+          <p class="eyebrow">04 / PROCESS &amp; ITERATION</p>
+          <h2>From system to playable prototype.</h2>
+          <p>SCAMPHONY currently exists as a playable prototype containing its environments, dialogue and core interactions. Development has focused on establishing the game's systems and narrative structure before completing animation and final visual polish.</p>
+          <h3>Playable prototype</h3>
+          <p>Early gameplay demonstrates the client-facing interaction and dialogue flow. </p>
+          <div class="video-slot">
+            <video controls muted playsinline preload="metadata" poster="../media/scamphony/WorkingScene.png">
+              <source src="../media/scamphony/CroppedGameplay.mov" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+            
+          </div>
+          <h3>Visual development</h3>
+          <p>Character expressions, in-world reference materials and interface artwork support the game's dialogue and deduction systems.</p>
+          <figure class="media-block book-block">
+            <img src="../media/scamphony/TITLE.png" alt="Early SCAMPHONY title artwork on parchment" loading="lazy">
+            <figcaption>Title treatment and visual identity development.</figcaption>
+          </figure>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer wrap">
+    <a href="../index.html">Bronwen Raikes <span>GAME DESIGN &amp; CREATIVE DESIGN</span></a>
+    <a href="../index.html#projects">More projects →</a>
+  </footer>
+</body>
+</html>
