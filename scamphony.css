@@ -165,7 +165,7 @@ video {
     position: absolute;
     inset: 0;
 
-    background: url('media/scamphony/scamphony-paper.png')
+    background: url('Media/scamphony/scamphony-paper.png')
                 center / cover no-repeat;
 
     z-index: -1;
