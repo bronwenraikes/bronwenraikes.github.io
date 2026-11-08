@@ -855,7 +855,7 @@ footer span {
     width: clamp(220px, 32vw, 500px);
     max-width: none;
     height: auto;
-    left: max(500px, calc(50% + 300px));
+    right: max(0px, calc(50vw - 800px));
     bottom: -180px;
     z-index: 5;
     pointer-events: none;
