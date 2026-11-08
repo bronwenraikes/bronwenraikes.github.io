@@ -709,10 +709,6 @@ footer span {
         padding: 12px 3px;
     }
 
-    .dark-art,
-    .tiles {
-        height: 300px;
-    }
 
     footer {
         flex-wrap: wrap;
