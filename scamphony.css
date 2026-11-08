@@ -79,8 +79,8 @@ video {
    ========================================================= */
 
 .site-nav {
-    min-height: 82px;
-    padding: 18px max(32px, calc((100vw - var(--content))/2));
+    min-height: 90px;
+    padding: 12px 5%;
 
     display: flex;
     align-items: center;
@@ -97,9 +97,9 @@ video {
 .wordmark {
     display: flex;
     align-items: center;
-    gap: 14px;
-
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: .05em;
     line-height: 1.2;
 }
 
@@ -111,9 +111,10 @@ video {
 .wordmark small {
     display: block;
     margin-top: 6px;
-
     color: var(--muted);
-    font: 700 .65rem Consolas, monospace;
+    font-family: 'Space Mono', monospace;
+    font-size: .65rem;
+    font-weight: 700;
     letter-spacing: .12em;
 }
 
